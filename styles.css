@@ -524,20 +524,20 @@ body {
 
 /* Phone icon - standard green color */
 .phone-link i {
-    color: #4CAF50;
+    color: #4CAF50 !important;
 }
 
 .phone-link:hover i {
-    color: #45a049;
+    color: #45a049 !important;
 }
 
 /* Email icon - standard blue color */
 .email-link i {
-    color: #2196F3;
+    color: #2196F3 !important;
 }
 
 .email-link:hover i {
-    color: #1976D2;
+    color: #1976D2 !important;
 }
 
 /* Instagram icon - original gradient colors */
