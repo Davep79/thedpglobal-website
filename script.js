@@ -1,9 +1,15 @@
-// DOM Elements
+// Performance optimization: Use more efficient selectors
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('.section');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const contactForm = document.getElementById('contactForm');
+
+// Cache DOM queries for better performance
+const nameInput = document.getElementById('name');
+const phoneInput = document.getElementById('phone');
+const messageInput = document.getElementById('message');
+const dateInput = document.getElementById('date');
 
 // Tab Navigation Function
 function switchTab(tabName) {
@@ -50,9 +56,9 @@ function toggleMobileMenu() {
 
 // Form Validation
 function validateForm() {
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const name = nameInput.value.trim();
+    const phone = phoneInput.value.trim();
+    const message = messageInput.value.trim();
     
     let isValid = true;
     
@@ -479,15 +485,25 @@ function addInteractiveFeatures() {
     }
 }
 
-// Initialize when DOM is loaded
+// Initialize when DOM is loaded with performance optimization
 document.addEventListener('DOMContentLoaded', () => {
     init();
-    addInteractiveFeatures();
     setupFormAutoDate();
     
     // Set initial body opacity for loading effect
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease';
+    
+    // Use requestIdleCallback for non-critical initialization
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+            addInteractiveFeatures();
+        });
+    } else {
+        setTimeout(() => {
+            addInteractiveFeatures();
+        }, 100);
+    }
 });
 
 // Setup form with auto-filled date
