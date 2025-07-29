@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DP Global - Health & Skincare Consultation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="DP Global Logo" class="logo-image">
+                <h2>DP Global</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-tab="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link" data-tab="services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-tab="contact">Contact Us</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Where your journey to a better life takes <span>flight</span></h1>
+                    <p class="hero-description">
+                        At DP Global, we are dedicated to enhancing your health and skin through personalized consultation services. We are committed to providing the best advice and solutions tailored to your needs. Discover the path to a healthier, more radiant you with our comprehensive range of services.
+                    </p>
+                    <button class="cta-button" onclick="switchTab('contact')">Book Free Consultation</button>
+                </div>
+                
+                <div class="mission-section">
+                    <h2>Our <span>Mission</span></h2>
+                    <p>
+                        At DP Global, our mission is to empower individuals to achieve optimal health and radiant skin through expert consultation, personalized care, and innovative solutions. We believe that everyone deserves access to professional guidance that enhances their well-being and confidence. By combining cutting-edge knowledge with compassionate care, we strive to be the trusted partner in your journey towards a healthier, more vibrant lifestyle.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title">Our <span>Services</span></h2>
+                
+                <!-- Health Consultation -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>Health Consultation</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-apple-alt"></i> Everyday Nutrition</li>
+                            <li><i class="fas fa-heart"></i> Heart & Liver Health</li>
+                            <li><i class="fas fa-shield-alt"></i> Immunity & Energy</li>
+                            <li><i class="fas fa-drumstick-bite"></i> Gut Health</li>
+                            <li><i class="fas fa-bone"></i> Bone & Joint Health</li>
+                            <li><i class="fas fa-eye"></i> Vision & Sleep Health</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skin Consultation -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>Skin Consultation</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-sun"></i> Dull Skin</li>
+                            <li><i class="fas fa-adjust"></i> Uneven Skin Tone & Dark Spot</li>
+                            <li><i class="fas fa-minus"></i> Fine Lines & Wrinkles</li>
+                            <li><i class="fas fa-hand-holding-heart"></i> Loss of Firmness & Elasticity</li>
+                            <li><i class="fas fa-tint"></i> Dry Skin, Oily Skin, Sensitive Skin</li>
+                            <li><i class="fas fa-dot-circle"></i> Visible Pores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Why DP Global -->
+                <div class="why-section">
+                    <h3>Why <span>DP Global</span></h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-user-friends"></i>
+                            <h4>Personalized Care</h4>
+                            <p>Tailored solutions designed specifically for your unique needs and goals.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <h4>Comprehensive Approach</h4>
+                            <p>Holistic solutions that address both health and skincare concerns together.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-microscope"></i>
+                            <h4>Advanced Technology</h4>
+                            <p>State-of-the-art methods and techniques for optimal results.</p>
+                        </div>
+                    </div>
+                    <div class="features-grid-bottom">
+                        <div class="feature-item-bottom">
+                            <i class="fas fa-smile"></i>
+                            <h4>Client Satisfaction</h4>
+                            <p>Proven track record of delighted clients and successful transformations.</p>
+                        </div>
+                    </div>
+                    <p class="experience-text">Experience the difference with DP Global – your trusted partner in health and skin care.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact <span>Us</span></h2>
+                <div class="contact-form-container">
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Date *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="tel:6478395405" class="footer-link">
+                    <i class="fas fa-phone"></i>
+                    <span>Call Us</span>
+                </a>
+                <a href="mailto:info@thedpglobal.com" class="footer-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email Us</span>
+                </a>
+                <a href="https://www.instagram.com/dpglobal4" target="_blank" class="footer-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://facebook.com/dave.patel.442642" target="_blank" class="footer-link">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 DP Global. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS for advanced email functionality (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
