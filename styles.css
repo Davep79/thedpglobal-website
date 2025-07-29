@@ -503,20 +503,47 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+    justify-content: center;
+    padding: 0.8rem;
+    border-radius: 50%;
     transition: all 0.3s ease;
     background: rgba(255,255,255,0.1);
+    width: 50px;
+    height: 50px;
 }
 
 .footer-link:hover {
     background: rgba(255,255,255,0.2);
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.1);
 }
 
 .footer-link i {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+}
+
+/* Instagram icon - original gradient colors */
+.instagram-link i {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.instagram-link:hover i {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: brightness(1.2);
+}
+
+/* Facebook icon - original blue color */
+.facebook-link i {
+    color: #1877f2;
+}
+
+.facebook-link:hover i {
+    color: #166fe5;
 }
 
 .footer-copyright {
