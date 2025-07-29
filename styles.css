@@ -523,20 +523,20 @@ body {
 }
 
 /* Phone icon - standard green color */
-.footer-link:has(.fa-phone) i {
+.phone-link i {
     color: #4CAF50;
 }
 
-.footer-link:has(.fa-phone):hover i {
+.phone-link:hover i {
     color: #45a049;
 }
 
 /* Email icon - standard blue color */
-.footer-link:has(.fa-envelope) i {
+.email-link i {
     color: #2196F3;
 }
 
-.footer-link:has(.fa-envelope):hover i {
+.email-link:hover i {
     color: #1976D2;
 }
 
