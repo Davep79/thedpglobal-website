@@ -584,12 +584,14 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: #4CAF50;
+        background-color: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(15px);
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 2rem 0;
+        box-shadow: 0 10px 30px rgba(0, 150, 255, 0.2);
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 150, 255, 0.2);
     }
     
     .nav-menu.active {
@@ -687,11 +689,44 @@ body {
     }
     
     .nav-logo .logo-image {
-        height: 30px;
+        height: 25px;
     }
     
     .nav-logo h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+}
+
+/* iPhone specific optimizations */
+@media (max-width: 375px) {
+    .navbar {
+        padding: 0.3rem 0;
+    }
+    
+    .nav-logo h2 {
+        font-size: 1rem;
+    }
+    
+    .nav-logo .logo-image {
+        height: 20px;
+    }
+    
+    .nav-menu {
+        top: 60px;
+        padding: 0.5rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
 
