@@ -443,19 +443,27 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 2px solid #444;
+    border: 2px solid #444 !important;
     border-radius: 8px;
     font-size: 1rem;
-    background-color: #2a2a2a;
-    color: #ffffff;
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
     transition: border-color 0.3s ease;
+    box-sizing: border-box;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #00aaff;
-    background-color: #333333;
+    border-color: #00aaff !important;
+    background-color: #333333 !important;
+}
+
+/* Specific textarea styles to override browser defaults */
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
 }
 
 .submit-btn {
@@ -778,12 +786,12 @@ html {
 /* Form validation styles */
 .form-group input:invalid,
 .form-group textarea:invalid {
-    border-color: #ff6b6b;
-    background-color: #3a2a2a;
+    border-color: #ff6b6b !important;
+    background-color: #3a2a2a !important;
 }
 
 .form-group input:valid,
 .form-group textarea:valid {
-    border-color: #51cf66;
-    background-color: #2a3a2a;
+    border-color: #51cf66 !important;
+    background-color: #2a3a2a !important;
 } 
