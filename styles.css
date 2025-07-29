@@ -493,9 +493,10 @@ body {
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.5rem;
     margin-bottom: 1rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .footer-link {
@@ -519,6 +520,24 @@ body {
 
 .footer-link i {
     font-size: 1.5rem;
+}
+
+/* Phone icon - standard green color */
+.footer-link:has(.fa-phone) i {
+    color: #4CAF50;
+}
+
+.footer-link:has(.fa-phone):hover i {
+    color: #45a049;
+}
+
+/* Email icon - standard blue color */
+.footer-link:has(.fa-envelope) i {
+    color: #2196F3;
+}
+
+.footer-link:has(.fa-envelope):hover i {
+    color: #1976D2;
 }
 
 /* Instagram icon - original gradient colors */
@@ -624,8 +643,9 @@ body {
     }
     
     .footer-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
+        flex-wrap: nowrap;
     }
     
     .container {
